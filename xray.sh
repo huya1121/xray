@@ -70,7 +70,7 @@ echo "证书生成完成！"
 
 xray(){
 echo "开始安装/更新xray"
-bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)  > /dev/null
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install  > /dev/null
 if [ $? == 0 ]; then
 echo "xray 安装完成！"
 systemctl restart xray
